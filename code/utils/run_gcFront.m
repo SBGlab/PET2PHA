@@ -2,7 +2,7 @@ initCobraToolbox(false)
 changeCobraSolver('gurobi')
 
 %SETTING PROJECT PATH:
-PROJECT_PATH='/home/alvaro/github/ConsortiumEngineeringTool/jupyter_notebook/'
+PROJECT_PATH='/home/alvaro/github/PET2PHA/'
 
 %READING 'production_target_tf.csv' TO LOAD TARGET METABOLITE & ORGANISM
 targetTable=readtable(strcat(PROJECT_PATH,'production_target_tf.csv'))
