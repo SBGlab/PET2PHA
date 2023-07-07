@@ -13,7 +13,7 @@
    viewBox="0 0 452.23464 567.59852"
    version="1.2"
    id="svg1582"
-   sodipodi:docname="STRAIN_DESIGN_WORKFLLOW.svg"
+   sodipodi:docname="figure_2.svg"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
    inkscape:export-filename="/home/alvaro/github/StrainDesignPipeline/putida_pet_to_pha_ko_results/figures/STRAIN_DESIGN_WORKFLOW.png"
    inkscape:export-xdpi="400"
@@ -39,15 +39,15 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1043"
+     inkscape:window-width="1848"
+     inkscape:window-height="1016"
      id="namedview1584"
      showgrid="false"
      inkscape:zoom="1"
-     inkscape:cx="222.40609"
-     inkscape:cy="353.07495"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:cx="20.40609"
+     inkscape:cy="589.07495"
+     inkscape:window-x="72"
+     inkscape:window-y="150"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg1582"
      showguides="true"
@@ -2364,7 +2364,7 @@
   <path
      inkscape:connector-curvature="0"
      id="path459"
-     d="m 22.931082,135.79365 c 0,-4.27466 4.03125,-7.74278 9,-7.74278 H 172.80999 c 4.97266,0 9,3.46812 9,7.74278 v 197.80061 c 0,4.27801 -4.02734,7.74278 -9,7.74278 H 31.931082 c -4.96875,0 -9,-3.46477 -9,-7.74278 z m 0,0"
+     d="m 20.681082,136.54365 c 0,-4.27466 4.03125,-7.74278 9,-7.74278 H 170.55999 c 4.97266,0 9,3.46812 9,7.74278 v 197.80061 c 0,4.27801 -4.02734,7.74278 -9,7.74278 H 29.681082 c -4.96875,0 -9,-3.46477 -9,-7.74278 z m 0,0"
      style="fill:#fff0ca;fill-opacity:0.6;fill-rule:evenodd;stroke:#2e518f;stroke-width:1.39129305;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:5.56517202, 4.17387902;stroke-opacity:1" />
   <path
      inkscape:connector-curvature="0"
@@ -2595,14 +2595,14 @@
   <text
      id="text8749"
      y="14.593749"
-     x="132.5639"
+     x="135.88029"
      style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11px;line-height:2.25;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif, Bold Italic';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:end;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#425168;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
      xml:space="preserve"><tspan
        style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:15.99999905px;line-height:2.25;font-family:'Open Sans', verdana, arial, sans-serif;-inkscape-font-specification:'Open Sans, verdana, arial, sans-serif, Bold Italic';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:end;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:end;white-space:normal;shape-padding:0;vector-effect:none;fill:#425168;fill-opacity:1;stroke:none;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        y="14.593749"
-       x="132.5639"
+       x="135.88029"
        id="tspan8747"
-       sodipodi:role="line">iJN1462</tspan></text>
+       sodipodi:role="line">iJNP4SB</tspan></text>
   <g
      id="g1163"
      style="fill:#425168;fill-opacity:1"
@@ -58353,6 +58353,7 @@
          style="font-weight:bold;font-size:56.05926132px">Growth (h​<tspan
    id="tspan9543"
    style="font-size:56.05926132px;baseline-shift:super">-1</tspan>
+
 ) </tspan>
     </text>
   </g>
