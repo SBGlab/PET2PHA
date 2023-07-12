@@ -24,6 +24,6 @@ conda activate strain-design
 ``` 
 Eventually run the two main scripts by executing them from shell:
 ```
-nohup python code/kt_simplification.py && python code/kt_simplification.py $
+nohup python code/kt_simplification.py && python code/gc_strategy_search.py $
 ```
 To analyse the results, just execute the notebooks within the `code` folder.
