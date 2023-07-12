@@ -243,19 +243,21 @@ def generate_strategies(set_up_params, configured_model, target_biomass, target_
     #compute reference values for biomas and target fluxes:
     experiment = '_'.join(set_up_params['project'].split('_')[0:-2])   
     #try to read file containing essential reactions, if not possible compute them
+    data_path = '../data'
     essential_gene_filename = experiment+'_essential_reactions.csv'
-    project_path = '/'.join([set_up_params['dir_path'], set_up_params['project']])
-    framework_path = '/'.join([project_path, set_up_params['framework']])
-    essential_gene_filepath = '/'.join([project_path, essential_gene_filename])
+    framework_path = '/'.join([data_path, set_up_params['framework']])
+    essential_gene_filepath = '/'.join([data_path, essential_gene_filename])
+    
     try:
         essential_df = pd.read_csv(essential_gene_filepath, header=None)
+        
     except IOError:
         print("File not accessible, computing process esential reactions...")
         essential_rxns = select_protected_reactions(configured_model, target_biomass, target_reaction)
         pd.DataFrame.from_dict({'Reaction_id': list(essential_rxns)}).to_csv(essential_gene_filepath, index=False)
         #make directory for the project inside the current directory:
-        if not os.path.isdir(project_path):
-            os.mkdir(project_path)
+        if not os.path.isdir(data_path):
+            os.mkdir(data_path)
                             
         essential_df = pd.read_csv(essential_gene_filepath, header=None)
 
@@ -398,13 +400,15 @@ def analyse_results(set_up_params, model, target_reaction, sorting_param, analys
     c_list = []
     return_var = []
 
+    data_dir = '../data'
+
     for c_l in set_up_params['max_cl_range']:
         for m_ko in set_up_params['max_knock_out_range']:
             for r in range(set_up_params['replicates']):
                 try:
                     experiment = '_'.join(set_up_params['project'].split('_')[0:-2])
                     filename= experiment+'_'+str(m_ko)+'_ko_'+str(c_l)+'_'+str(r)+'_rep.csv'
-                    filepath= '/'.join([set_up_params['dir_path'], set_up_params['project'], set_up_params['framework'], filename])
+                    filepath= '/'.join([data_dir, set_up_params['framework'], filename])
                     print('Reading %s' % filepath)
                     df = pd.read_csv(filepath)
 
@@ -437,7 +441,7 @@ def analyse_results(set_up_params, model, target_reaction, sorting_param, analys
                     'N_of_deletions': [len(s) for s in strategy_list],
                     'C_limit': c_list}
         raw_df = pd.DataFrame.from_dict(raw_data)
-        raw_df.to_csv('/'.join([set_up_params['dir_path'], set_up_params['project'], set_up_params['framework'], experiment+'_optknock_strategy_analysis.csv']), index=False)
+        raw_df.to_csv('/'.join([data_dir, set_up_params['framework'], experiment+'_optknock_strategy_analysis.csv']), index=False)
         return_var.append(raw_df)
 
     if analysis_type == 'gene_candidates' or 'gene_candidates' in analysis_type:
@@ -455,7 +459,7 @@ def analyse_results(set_up_params, model, target_reaction, sorting_param, analys
 
 
         results_df = pd.DataFrame.from_dict(final_candidate_data).sort_values(by=sorting_param, ascending=False)
-        results_df.to_csv('/'.join([set_up_params['dir_path'], set_up_params['project'], set_up_params['framework'],experiment+'_optknock_gene_analysis.csv']), index=False)
+        results_df.to_csv('/'.join([data_dir, set_up_params['framework'],experiment+'_optknock_gene_analysis.csv']), index=False)
         return_var.append(results_df)
 
     if len(return_var) == 1:

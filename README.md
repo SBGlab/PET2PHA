@@ -4,8 +4,13 @@ Repository with teh resources for the in silico analysis for biodegradation of P
 PET2PHA
   |---code
   |     |---utils
+  |
   |---data
+  |     |---cameo
+  |     |---CometsResults  
+  |
   |---figures
+  |
   |---models
 
 ```

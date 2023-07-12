@@ -2,7 +2,7 @@ initCobraToolbox(false)
 changeCobraSolver('gurobi')
 
 %SETTING PROJECT PATH:
-PROJECT_PATH='/home/alvaro/github/ConsortiumEngineeringTool/jupyter_notebook/'
+PROJECT_PATH='/home/alvaro/github/PET2PHA/'
 
 %READING 'production_target_tf.csv' TO LOAD TARGET METABOLITE & ORGANISM
 targetTable=readtable(strcat(PROJECT_PATH,'production_target_tf.csv'))
@@ -15,11 +15,12 @@ biomass_limit=cell2mat(table2cell(targetTable(:,4)))
 production_limit=cell2mat(table2cell(targetTable(:,5))
 
 %SETTING INTERNAL PATHS:
-EXPERIMENT_PATH=strcat(PROJECT_PATH, experiment,'_ko_results/')
+EXPERIMENT_PATH=strcat(PROJECT_PATH, 'data/')
+MODEL_DIR=strcat(PROJECT_PATH, 'models/')
 FRAMEWORK_PATH=strcat(EXPERIMENT_PATH,framework,'/')
 
 %READING A FILE WITH THE NEW MODEL, CONFIGURED WITH Cameo
-MODEL_PATH=strcat(EXPERIMENT_PATH,'configured_model.mat')
+MODEL_PATH=strcat(MODEL_DIR,'configured_model.mat')
 model=readCbModel(MODEL_PATH)
 
 %READING '{experiment}_optknock_analysis.csv' IMPORTS THE TOP CANDIDATE GENES
@@ -29,7 +30,6 @@ selectedRxns=table2cell(selectedRxnsTable(:,1))
 modelRxns = model.rxns
 noKOsRxns = setdiff(modelRxns, selectedRxns)
 
-%NOW WE NEED TO READ THE FILE 'workflow_params.csv', WHERE ALL
 maxKO=30
 minGrowth=biomass_limit
 minProduction=production_limit
@@ -38,6 +38,7 @@ minProduction=production_limit
 
 % set model options so gurobi is used to solve LP problems, and so knockout
 % combinations with more than 30 knockouts will not be considered
+
 options=struct;
 options.solver='gurobi';           % Character array of the name of the LP solver used for solving FBA problems. Default  =  currently set LP solver. If no solver set, will use whatever solver the function initCobraToolbox sets�
 options.maxknockouts=maxKO;        % Double specifying the maximum number of knockouts that a design may contain. Default  =  inf (i.e. no limit on the number of deletions allowed)
