@@ -1,5 +1,11 @@
 # PET2PHA
-Repository with teh resources for the in silico analysis for biodegradation of PET and accumulation of PHA by P. putida
+Repository with the resources for the in silico analysis for biodegradation of PET and accumulation of PHA by P. putida
+## Citation
+
+[![DOI](DOI)](https://doi.org/10.6084/m9.figshare.23760606.v1)
+
+Nogales, Juan; Manoli, Maria-Tsampika; Gargantilla Becerra, Alvaro; del Cerro Sánchez, Carlos; Rivero, Virginia; Prieto, Auxiliadora (2023). PET2PHA: Source code and resources for in silico metabolic analysis in P. putida to accumulate PHA with PET as carbon source. figshare. Software. https://doi.org/10.6084/m9.figshare.23760606.v1
+
 ```
 PET2PHA
   |---code
